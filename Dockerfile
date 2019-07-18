@@ -1,9 +1,8 @@
-FROM golang:1.12-alpine AS build
+FROM golang:1.12-stretch AS build
 ADD . /src
 WORKDIR /src
-RUN apk add --no-cache git
 RUN go mod download
-RUN go build
+RUN CGO_ENABLED=0 go build -tags netgo -installsuffix netgo -ldflags "-s -w"
 
 FROM alpine:latest
 COPY --from=build /src/easy-novnc /
