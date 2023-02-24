@@ -8,6 +8,5 @@ require (
 	github.com/shurcooL/vfsgen v0.0.0-20181202132449-6a9ea43bcacd
 	github.com/spf13/pflag v1.0.3
 	github.com/spkg/zipfs v0.7.0
-	golang.org/x/net v0.0.0-20190522155817-f3200d17e092
-	golang.org/x/tools v0.0.0-20190525145741-7be61e1b0e51 // indirect
+	golang.org/x/net v0.7.0
 )
